@@ -1,0 +1,66 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Tempo de geração: 04/08/2020 às 08:21
+-- Versão do servidor: 10.4.11-MariaDB
+-- Versão do PHP: 7.4.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `buscar`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `endereco`
+--
+
+CREATE TABLE `endereco` (
+  `cep_id` varchar(10) NOT NULL,
+  `rua` varchar(100) NOT NULL,
+  `bairro` varchar(100) NOT NULL,
+  `cidade` varchar(100) NOT NULL,
+  `uf` varchar(3) NOT NULL,
+  `ibge` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Despejando dados para a tabela `endereco`
+--
+
+INSERT INTO `endereco` (`cep_id`, `rua`, `bairro`, `cidade`, `uf`, `ibge`) VALUES
+('01010-010', 'Praça Antônio Prado', 'Centro', 'São Paulo', 'SP', '3550308'),
+('01010-900', 'Praça Antônio Prado 33', 'Centro', 'São Paulo', 'SP', '3550308'),
+('01010-901', 'Praça Antônio Prado 48', 'Centro', 'São Paulo', 'SP', '3550308'),
+('01034-001', 'Rua Antônio de Godói', 'Centro', 'São Paulo', 'SP', '3550308'),
+('88015-710', 'Avenida Osvaldo Rodrigues Cabral', 'Centro', 'Florianópolis', 'SC', '4205407'),
+('88021-000', 'Rua José Maria da Luz', 'José Mendes', 'Florianópolis', 'SC', '4205407'),
+('88021-010', 'Servidão João Honorato Soares', 'José Mendes', 'Florianópolis', 'SC', '4205407'),
+('88512-530', 'Rua Antônio Caldas', 'Santa Catarina', 'Lages', 'SC', '4209300');
+
+--
+-- Índices de tabelas apagadas
+--
+
+--
+-- Índices de tabela `endereco`
+--
+ALTER TABLE `endereco`
+  ADD PRIMARY KEY (`cep_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
